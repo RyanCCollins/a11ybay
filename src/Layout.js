@@ -47,11 +47,11 @@ function Main({
           </Box>
         }
       </Header>
-      <MainComponent pad='medium' flex as='main'>
+      <MainComponent id='main' pad='medium' flex as='main'>
         {children}
       </MainComponent>
       <Footer
-        id='app-footer'
+        id='footer'
         direction='row-responsive'
         background="light-2"
         fill="horizontal"

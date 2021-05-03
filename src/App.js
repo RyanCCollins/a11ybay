@@ -2,6 +2,8 @@
 import React from 'react';
 import {
   Grommet,
+  SkipLinks,
+  SkipLink,
   grommet,
 } from 'grommet';
 import { Router } from '@reach/router';
@@ -11,6 +13,10 @@ import Layout from './Layout';
 function App() {
   return (
     <Grommet full theme={grommet}>
+      <SkipLinks>
+        <SkipLink id="main" label="Main Content" />
+        <SkipLink id="footer" label="Footer" />
+      </SkipLinks>
       <Layout>
         <Router>
           <Main path="/" />

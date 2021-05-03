@@ -68,13 +68,13 @@ function Main({
           as='ul'
         >
           <li>
-            <Anchor label='About' href='/about' />
+            <Anchor label='About' path='/about' />
           </li>
           <li>
-            <Anchor label='Privacy Policy' href='#' />
+            <Anchor label='Privacy Policy' path='/' />
           </li>
           <li>
-            <Anchor label='Terms of Service' href='#' />
+            <Anchor label='Terms of Service' path='/' />
           </li>
         </Box>
       </Footer>

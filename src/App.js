@@ -5,7 +5,7 @@ import {
   SkipLinks,
   SkipLink,
 } from 'grommet';
-import {hpe} from 'grommet-theme-hpe';
+import { hpe } from 'grommet-theme-hpe';
 import { Router } from '@reach/router';
 import { Main, About } from './screens/';
 import Layout from './Layout';

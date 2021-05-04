@@ -8,6 +8,7 @@ import {
   Button,
   Box,
   Heading,
+  RoutedAnchor as Anchor,
 } from 'grommet';
 import { Favorite, ShareOption, Basket } from 'grommet-icons';
 
@@ -22,32 +23,37 @@ const ProductItem = ({
         {title}
       </Heading>
     </CardHeader>
-    <CardBody
-      role="img"
-      alt={title}
-      background={{
-        "color": "white",
-        "position": "top",
-        "repeat": "no-repeat",
-        "size": "contain",
-        "image": `url(${image})`
-      }}
-      />
+      <CardBody pad='none'>
+        <Anchor style={{ width: '100%', height: '100%' }} path='/'>
+          <Box
+            fill
+            role="img"
+            title={`${title} ${price}`}
+            background={{
+              color: "white",
+              position: "top",
+              repeat: "no-repeat",
+              size: "contain",
+              image: `url(${image})`
+            }}
+          />
+        </Anchor>
+      </CardBody>
     <CardFooter pad={{ horizontal: "small" }} background="light-2">
       {price}
       <Box direction='row'>
         <Button
-          a11yTitle='Add this item to your basket'
+          a11yTitle={`Add ${title} to your basket`}
           icon={<Basket color="green" />}
           hoverIndicator
         />
         <Button
-          a11yTitle='Add this item to your favorites'
+          a11yTitle={`Add ${title} to your favorites`}
           icon={<Favorite color="red" />}
           hoverIndicator
         />
         <Button
-          a11yTitle='Share this item'
+          a11yTitle={`Share ${title}`}
           icon={<ShareOption color="plain" />}
           hoverIndicator
         />

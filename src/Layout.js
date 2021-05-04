@@ -2,7 +2,6 @@
 import React, { useContext } from 'react';
 import {
   RoutedAnchor as Anchor,
-  Text,
   Main as MainComponent,
   Header,
   Box,
@@ -10,7 +9,7 @@ import {
   ResponsiveContext,
   Footer,
 } from 'grommet';
-import { Menu, User, Cart, StatusInfo } from 'grommet-icons';
+import { Menu, User, Cart, WheelchairActive } from 'grommet-icons';
 
 function Main({
   children,
@@ -18,33 +17,17 @@ function Main({
   const size = useContext(ResponsiveContext);
   return (
     <Box fill>
-      <Header pad='small' background='brand'>
-        <Anchor color='white' path='/'>
-          <Box align='center' gap='small' direction='row'>
-            <Text size='medium' weight='bold'>
-              Allybay
-            </Text>
-          </Box>
-        </Anchor>
+      <Header pad='small' background='#0d5265'>
+        <Anchor color='white' label='Allybay' icon={<WheelchairActive />} path='/' />
         {size === 'small' && <Button icon={<Menu />} />}
         {size !== 'small' &&
           <Box
             style={{ listStyle: 'none' }}
             direction='row'
-            gap='medium'
             align='center'
             as='ul'
           >
-            <Box as='li'>
-              <Anchor
-                style={{ display: 'flex', alignItems: 'center' }}
-                icon={<StatusInfo />}
-                color='white'
-                label='About'
-                path='/about'
-              />
-            </Box>
-            <Box as='li'>
+            <Box as='li' margin={{ right: 'medium' }}>
               <Anchor
                 style={{ display: 'flex', alignItems: 'center' }}
                 icon={<User />}
@@ -81,19 +64,18 @@ function Main({
           pad='none'
           margin='none'
           direction='row'
-          gap='medium'
           align='center'
           as='ul'
         >
-          <li>
+          <Box as='li' margin={{ right: 'medium' }}>
             <Anchor label='About' path='/about' />
-          </li>
-          <li>
+          </Box>
+          <Box as='li' margin={{ right: 'medium' }}>
             <Anchor label='Privacy Policy' path='/' />
-          </li>
-          <li>
+          </Box>
+          <Box as='li'>
             <Anchor label='Terms of Service' path='/' />
-          </li>
+          </Box>
         </Box>
       </Footer>
     </Box>

@@ -4,15 +4,15 @@ import {
   Grommet,
   SkipLinks,
   SkipLink,
-  grommet,
 } from 'grommet';
+import {hpe} from 'grommet-theme-hpe';
 import { Router } from '@reach/router';
 import { Main, About } from './screens/';
 import Layout from './Layout';
 
 function App() {
   return (
-    <Grommet full theme={grommet}>
+    <Grommet full theme={hpe}>
       <SkipLinks>
         <SkipLink id="main" label="Main Content" />
         <SkipLink id="footer" label="Footer" />

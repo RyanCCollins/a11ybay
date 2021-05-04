@@ -10,7 +10,7 @@ import {
   ResponsiveContext,
   Footer,
 } from 'grommet';
-import { Menu } from 'grommet-icons';
+import { Menu, User, Cart, StatusInfo } from 'grommet-icons';
 
 function Main({
   children,
@@ -19,9 +19,9 @@ function Main({
   return (
     <Box fill>
       <Header pad='small' background='brand'>
-        <Anchor path='/'>
+        <Anchor color='white' path='/'>
           <Box align='center' gap='small' direction='row'>
-            <Text weight='bold'>
+            <Text size='medium' weight='bold'>
               Allybay
             </Text>
           </Box>
@@ -35,15 +35,33 @@ function Main({
             align='center'
             as='ul'
           >
-            <li>
-              <Anchor label='About' path='/about' />
-            </li>
-            <li>
-              <Anchor label='My Account' path='#' />
-            </li>
-            <li>
-              <Anchor label='Cart' path='#' />
-            </li>
+            <Box as='li'>
+              <Anchor
+                style={{ display: 'flex', alignItems: 'center' }}
+                icon={<StatusInfo />}
+                color='white'
+                label='About'
+                path='/about'
+              />
+            </Box>
+            <Box as='li'>
+              <Anchor
+                style={{ display: 'flex', alignItems: 'center' }}
+                icon={<User />}
+                color='white'
+                label='My Account'
+                path='#'
+              />
+            </Box>
+            <Box as='li'>
+              <Anchor
+                style={{ display: 'flex', alignItems: 'center' }}
+                icon={<Cart />}
+                color='white'
+                label='Cart'
+                path='#'
+              />
+            </Box>
           </Box>
         }
       </Header>

@@ -12,7 +12,7 @@ import ProductCard from '../../ProductCard';
 
 function Main() {
   return (
-    <Box fill overflow="hidden">
+    <Box pad={{ vertical: 'small' }} fill overflow="hidden">
       <Heading level={1}>
         Items for you
       </Heading>

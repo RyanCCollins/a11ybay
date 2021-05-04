@@ -37,14 +37,20 @@ const ProductItem = ({
       {price}
       <Box direction='row'>
         <Button
-          icon={<Basket a11yTitle='Add this item to your basket' color="green" />}
+          a11yTitle='Add this item to your basket'
+          icon={<Basket color="green" />}
           hoverIndicator
         />
         <Button
-          icon={<Favorite a11yTitle='Add this item to your favorites' color="red" />}
+          a11yTitle='Add this item to your favorites'
+          icon={<Favorite color="red" />}
           hoverIndicator
         />
-        <Button icon={<ShareOption a11yTitle='Share this item' color="plain" />} hoverIndicator />
+        <Button
+          a11yTitle='Share this item'
+          icon={<ShareOption color="plain" />}
+          hoverIndicator
+        />
       </Box>
     </CardFooter>
   </Card>

@@ -1,13 +1,5 @@
-// (C) Copyright 2017-2021 Hewlett Packard Enterprise Development LP
+import { Box, Button, Form, FormField, TextArea, TextInput } from "grommet";
 import React from "react";
-import {
-  Box,
-  Form,
-  FormField,
-  TextInput,
-  TextArea,
-  Button,
-} from "grommet";
 
 function ContactForm() {
   const [value, setValue] = React.useState({});

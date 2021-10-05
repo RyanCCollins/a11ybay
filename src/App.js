@@ -1,14 +1,9 @@
-// (C) Copyright 2017-2021 Hewlett Packard Enterprise Development LP
-import React from 'react';
-import {
-  Grommet,
-  SkipLinks,
-  SkipLink,
-} from 'grommet';
-import { hpe } from 'grommet-theme-hpe';
-import { Router } from '@reach/router';
-import { Main, About } from './screens/';
-import Layout from './Layout';
+import { Router } from "@reach/router";
+import { Grommet, SkipLink, SkipLinks } from "grommet";
+import { hpe } from "grommet-theme-hpe";
+import React from "react";
+import Layout from "./Layout";
+import { About, Main } from "./screens/";
 
 function App() {
   return (

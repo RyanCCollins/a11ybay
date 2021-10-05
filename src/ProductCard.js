@@ -7,6 +7,7 @@ import {
   CardHeader,
   Heading,
   RoutedAnchor as Anchor,
+  Text,
 } from "grommet";
 import { Basket, Favorite, ShareOption } from "grommet-icons";
 import React from "react";
@@ -39,8 +40,8 @@ const ProductItem = ({ title, price, image }) => (
         />
       </Anchor>
     </CardBody>
-    <CardFooter pad={{ horizontal: "small" }} background="light-2">
-      {price}
+    <CardFooter pad="small" background="light-2">
+      <Text weight="bold">{price}</Text>
       <Box direction="row">
         <Button
           a11yTitle={`Add ${title} to your basket`}

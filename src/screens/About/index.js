@@ -6,7 +6,7 @@ function About() {
   return (
     <Box align="center" fill>
       <Box
-        pad="medium"
+        pad="large"
         elevation="medium"
         round="small"
         width="xlarge"
